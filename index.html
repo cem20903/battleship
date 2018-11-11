@@ -1,0 +1,77 @@
+<html>
+
+<style type="text/css">
+
+
+div{
+  width:50px;
+  height: 50px;
+  position: relative;
+  float:left;
+  margin:3px;
+}
+.green{
+  background-color:green;
+  width:50px;
+  height:50px;
+}
+.grey{
+  background-color: grey;
+}
+
+</style>
+
+<script type="text/javascript">
+
+var barcos = [3,2,0];
+
+
+function attack(num){
+  var piece = document.getElementsByTagName("div")[num];
+ for(var a = 0;a<barcos.length;a++){
+   if(barcos[a]==num){
+     alert("Tocado");
+   } else{
+     alert("Agua");
+     break;
+   }
+ }
+
+  //alert(piece.getAttribute("value"));
+}
+
+
+window.onload = function(){
+
+
+}
+
+
+</script>
+
+
+<body>
+
+<p>
+  
+<div class="green" onclick="attack(0)" value="asdf"></div>
+<div class="grey" onclick="attack(1)"></div>
+<div class="green" onclick="attack(2)"></div>
+<div class="grey" onclick="attack(3)"></div>
+<div class="green" onclick="attack(4)"></div>
+</p> <br><p>
+<div class="green" onclick="attack(5)"></div>
+<div class="grey" onclick="attack(6)"></div>
+<div class="green" onclick="attack(7)"></div>
+<div class="grey" onclick="attack(8)"></div>
+<div class="green" onclick="attack(9)"></div>
+</p>
+
+</body>
+
+
+
+
+
+
+</html>
